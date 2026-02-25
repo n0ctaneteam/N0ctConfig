@@ -1,0 +1,66 @@
+# =========================
+# Python bytecode / cache
+# =========================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# =========================
+# Virtual environments
+# =========================
+.venv/
+venv/
+env/
+ENV/
+
+# =========================
+# Packaging / build output
+# =========================
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# =========================
+# Textual / Rich runtime data
+# =========================
+.textual/
+.textual-cache/
+textual.log
+rich.log
+
+# =========================
+# Logs & runtime files
+# =========================
+*.log
+*.pid
+*.lock
+
+# =========================
+# OS junk
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# Editor / IDE noise
+# =========================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# =========================
+# Testing / coverage
+# =========================
+.pytest_cache/
+.coverage
+htmlcov/
+
+# =========================
+# Env files (secrets)
+# =========================
+.env
+.env.*
