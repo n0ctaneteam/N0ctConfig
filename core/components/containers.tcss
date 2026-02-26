@@ -1,0 +1,14 @@
+SettingBox {
+    border: round white;
+    height: 3;
+
+    Input{
+        width: 50%;
+        height: 100%;
+    }
+
+    Switch {
+        border:none;
+        padding: 0;
+    }
+}

@@ -1,0 +1,42 @@
+{
+    // parse and render this in GENERAL and DECORATION sections in tui like this
+    //  use for loops, section loop -> setting loop -> render setting
+    // ======== GENERAL ========
+    // Inner Gaps: 10
+    // Outer Gaps: 10
+    // ======== DECORATION ========
+    // Border Size: 2
+    // Border type: 1
+    "general":[
+        {
+            "name":"Inner Gaps",
+            "key":"general:gaps_in",
+            "type":"int",
+            "value":10,
+            "description":"The size of the inner gaps between windows."
+        },
+        {
+            "name":"Outer Gaps",
+            "key":"general:gaps_out",
+            "type":"int",
+            "value":10,
+            "description":"The size of the outer gaps between windows and the screen edge."
+        }
+    ],
+    "decoration":[
+        {
+            "name":"Border Size",
+            "key":"decoration:border_size",
+            "type":"int",
+            "value":2,
+            "description":"The size of the window borders."
+        },
+        {
+            "name":"Border type",
+            "key":"decoration:border_power",
+            "type":"int",
+            "value":1,
+            "description":"The roundness of the window borders."
+        }
+    ]
+}
