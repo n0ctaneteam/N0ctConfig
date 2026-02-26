@@ -2,8 +2,9 @@ import importlib
 from pathlib import Path
 
 def discover_modules():
-    base_path = Path("modules")
-    folders = [p.name for p in base_path.iterdir() if p.is_dir()]
+    BASE_DIR = Path(__file__).resolve().parent
+    MODULES_DIR = BASE_DIR / "modules"
+    folders = [p.name for p in MODULES_DIR.iterdir() if p.is_dir()]
     
     tabs = []
     modules = []

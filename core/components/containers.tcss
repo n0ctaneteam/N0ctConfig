@@ -1,14 +1,57 @@
-SettingBox {
-    border: round white;
-    height: 3;
 
-    Input{
-        width: 50%;
+SettingBox {
+    border: round $secondary;
+    border-title-color: white;
+    border-title-style: bold;
+    # align: right middle;
+    height: 5;
+    padding: 0 1;
+    # margin: 0 0 1 0;
+
+    .setting-info{
+        width: 1fr;
         height: 100%;
+        align: left middle;
+        margin:0 1 0 0;
+    }
+    .setting-desc{
+        color: grey;
+        text-overflow: fold;
+        text-wrap: wrap;
+    }
+    .setting-input{
+        width: 12;
+        height: 100%;
+        align: center middle;
+        content-align: right middle;
+    }
+    .input{
+        width: 100%;
+        height: 100%;
+        padding:1;
+        align: right middle;
+    }
+    Input{
+        # width: 50%;
+        height: 100%;
+        padding:1;
+        align: right middle;
     }
 
     Switch {
+        width: 100%;
+        height: 100%;
         border:none;
-        padding: 0;
+        padding: 1 4 1 3;
     }
+    Switch .switch--slider {
+        max-width: 10;
+        height: 100%;
+    }
+}
+SettingBox:hover {
+    # height: 4;
+    # background: $primary;
+    border-title-style: bold underline;
+    border: round white;
 }

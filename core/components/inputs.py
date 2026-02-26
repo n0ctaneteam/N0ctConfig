@@ -1,6 +1,7 @@
 from textual.app import ComposeResult
 from textual.widgets import Input, Switch
 from textual.widget import Widget
+from textual.containers import Right
 
 # STRING INPUT
 class StringInput(Widget):
@@ -9,7 +10,7 @@ class StringInput(Widget):
         self._value = value
 
     def compose(self) -> ComposeResult:
-        yield Input(placeholder="xyz", type="text", compact=True)
+            yield Input(placeholder="xyz", type="text", compact=True)
 
 
 # INT INPUT 
@@ -19,7 +20,7 @@ class IntegerInput(Widget):
         self._value = value
 
     def compose(self) -> ComposeResult:
-        yield Input(placeholder="123", type="integer", compact=True)
+            yield Input(placeholder="123", type="integer", compact=True)
 
 
 # FLOAT INPUT
@@ -29,7 +30,7 @@ class FloatInput(Widget):
         self._value = value
 
     def compose(self) -> ComposeResult:
-        yield Input(placeholder="123.45", type="number", compact=True)
+            yield Input(placeholder="123.45", type="number", compact=True)
 
 
 # BOOL INPUT
@@ -39,4 +40,4 @@ class BooleanInput(Widget):
         self._value = value
 
     def compose(self) -> ComposeResult:
-        yield Switch(value=self._value)
+            yield Switch(value=self._value)

@@ -1,10 +1,10 @@
 from textual.app import ComposeResult
-from textual.widgets import Label
-from textual.containers import Horizontal,Vertical
+from textual.widgets import Label, Static
+from textual.containers import Horizontal,Vertical,Right
 
 from .inputs import StringInput, IntegerInput, FloatInput, BooleanInput
 
-class SettingBox(Vertical):
+class SettingBox(Horizontal):
     # this takes a NAME, KEY, TYPE, VALUE, DESCRIPTION and renders it in a nice way in the tui
     def __init__(self, name: str, key: str, type: str, value: str, description: str):
         super().__init__()
@@ -15,8 +15,11 @@ class SettingBox(Vertical):
         self._description = description
 
     def compose(self) -> ComposeResult:
-        with Horizontal():
-            yield Label(f"{self._name} ({self._type})")
+        self.border_title = self._name
+        with Vertical(classes="setting-info"):
+            # yield Label(f"{self._name} ({self._type})")
+            yield Static(f"Desc: {self._description}", classes="setting-desc")
+        with Horizontal(classes="setting-input"):
             match self._type:
                 # for now we only support string inputs, but we can easily add more types in the future
                 case "string":
@@ -27,4 +30,3 @@ class SettingBox(Vertical):
                     yield FloatInput(self._value);
                 case "bool":
                     yield BooleanInput(self._value);
-        yield Label(f"Desc: {self._description}")
