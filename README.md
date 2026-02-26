@@ -6,7 +6,7 @@
 - N0ctHypr ==> hypr dotfiles, but tweaked for config compatibility
 
 ## Architecture
-
+```
 N0ctConfig
 ├── 📂core
 │   ├── 📂components (buttuns,panels etc)
@@ -31,5 +31,5 @@ N0ctConfig
 ├── ▶️main.py
 ├── ▶️loader.py
 └── 🧰cachecleaner.sh
-
+```
 🧰cachecleaner.sh is a dev util, that u may run in BG to clear up annoying __pycache__ folders during runtime
