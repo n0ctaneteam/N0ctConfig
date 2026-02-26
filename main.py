@@ -19,10 +19,12 @@ class CoreApp(App):
 
     modules, tabs = discover_modules()
     def compose(self) -> ComposeResult:
+        # only testing, remove this later
         yield SettingBox("Test Setting", "test_setting", "string", "Hello World", "This is a test setting description")
         yield SettingBox("Test Setting 2", "test_setting_2", "bool", False, "This is another test setting description")
         yield SettingBox("Test Setting 3", "test_setting_3", "integer", 10, "This is yet another test setting description")
         yield SettingBox("Test Setting 4", "test_setting_4", "float", 3.14, "This is yet another test setting description")
+        
         with TabbedContent():
             for module, tab in zip(self.modules, self.tabs):
                 with TabPane(tab):
